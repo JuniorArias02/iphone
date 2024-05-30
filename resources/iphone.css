@@ -157,6 +157,35 @@ body{
     display: flex;
     margin-bottom: 15px;
 }
+.volumen{
+    display: flex;
+    position: absolute;
+    /* display: flex; */
+    justify-content: center;
+    width: 50px;
+    height: 180px;
+    background-color:#9D9D9D ;
+    border-radius: 80px;
+    border-width: 1px;
+    opacity: 0.0;
+    border-color:  black;
+    border: solid;
+    z-index: 1000;
+    left: 10px;
+    top: 215px;
+    overflow: hidden;
+    /* align-items: center; */
+   
+}
+.volumen-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
 .informacion{
     /* background: violet; */
     position: absolute;
