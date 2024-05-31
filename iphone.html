@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="resources/texto.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>iphone</title>
 </head>
 
@@ -23,33 +25,84 @@
             <div class="boton-encender"></div>
             <div class="telefono-border">
                 <div class="telefono-pantalla">
-                    <div class="boton-tono">
-                        <div class="tono-icon">
-                            <img src="resources/alerta-de-notificacion.png" alt="" srcset="">
+                    <div class="pantalla-bloqueado">
+                        <div class="boton-tono">
+                            <div class="tono-icon">
+                                <img src="resources/alerta-de-notificacion.png" alt="" srcset="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="pantalla-off"></div>
-                    <div class="notificaciones">
-                        <div class="noti-lock">
-                            <img src="resources/untitled.svg" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="informacion">
-                        <div class="fecha roboto-medium">
-                            <p id="fecha-actual"></p>
-                        </div>
+                        <div class="volumen">
+                            <div class="volumen-bar"></div>
 
-                        <div class="hora roboto-bold">
-                            <h1 id="hora-actual"></h1>
+                        </div>
+                        <div class="pantalla-off"></div>
+
+                        <div class="notificaciones">
+                            <div class="noti-lock">
+                                <img src="resources/untitled.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="informacion">
+                            <div class="fecha roboto-medium">
+                                <p id="fecha-actual"></p>
+                            </div>
+                            <div class="hora roboto-bold">
+                                <h1 id="hora-actual"></h1>
+                            </div>
+                        </div>
+                        <div class="barra_navegacion"></div>
+                    </div>
+
+                    <div class="pantalla-desbloqueo">
+                        <div class="icon">
+                            <div class="bloqueo-icon">
+                                <img src="resources/untitled.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="valor-clave">
+                            <div class="valor">
+                                <img src="resources/unchekc.svg" alt="" srcset="">
+                                <img src="resources/unchekc.svg" alt="" srcset="">
+                                <img src="resources/unchekc.svg" alt="" srcset="">
+                                <img src="resources/unchekc.svg" alt="" srcset="">
+                            </div>
+                           
+                        </div>
+                        <div class="controles">
+                            <div class="panel roboto-light">
+                                <div class="fila">
+                                    <div class="numero">1</div>
+                                    <div class="numero">2</div>
+                                    <div class="numero">3</div>
+                                </div>
+                                <div class="fila">
+                                    <div class="numero">4</div>
+                                    <div class="numero">5</div>
+                                    <div class="numero">6</div>
+                                </div>
+                                <div class="fila">
+                                    <div class="numero">7</div>
+                                    <div class="numero">8</div>
+                                    <div class="numero">9</div>
+                                </div>
+                                <div class="fila">
+                                    <div class="numero numVacio"></div>
+                                    <div class="numero">0</div>
+                                    <div class="numero numVacio"></div>
+                                </div>
+                            </div>
+                            <div class="barra_navegacion2"></div>
                         </div>
                     </div>
-                    <div class="barra_navegacion"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="resources/transicion.js"></script>
+    <script src="resources/volumen.js"></script>
+    <script src="resources/fechas.js"></script>
+    <script src="resources/pantalla_bloqueo.js"></script>
 </body>
 
 </html>
