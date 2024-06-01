@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/iphone.css">
+    <link rel="stylesheet" href="resources/css/iphone.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="resources/texto.css">
+    <link rel="stylesheet" href="resources/css/texto.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>iphone</title>
@@ -25,21 +25,22 @@
             <div class="boton-encender"></div>
             <div class="telefono-border">
                 <div class="telefono-pantalla">
+
+                    <div class="volumen">
+                        <div class="volumen-bar"></div>
+                    </div>
+                    <div class="pantalla-off"></div>
+                    <div class="boton-tono">
+                        <div class="tono-icon">
+                            <img src="resources/img/icon-resources/lerta-de-notificacion.png" alt="" srcset="">
+                        </div>
+                    </div>
+
                     <div class="pantalla-bloqueado">
-                        <div class="boton-tono">
-                            <div class="tono-icon">
-                                <img src="resources/alerta-de-notificacion.png" alt="" srcset="">
-                            </div>
-                        </div>
-                        <div class="volumen">
-                            <div class="volumen-bar"></div>
-
-                        </div>
-                        <div class="pantalla-off"></div>
-
+                        
                         <div class="notificaciones">
                             <div class="noti-lock">
-                                <img src="resources/untitled.svg" alt="" srcset="">
+                                <img src="resources/img/icon-resources/untitled.svg" alt="" srcset="">
                             </div>
                         </div>
                         <div class="informacion">
@@ -56,42 +57,145 @@
                     <div class="pantalla-desbloqueo">
                         <div class="icon">
                             <div class="bloqueo-icon">
-                                <img src="resources/untitled.svg" alt="" srcset="">
+                                <img src="resources/img/icon-resources/untitled.svg" alt="" srcset="">
                             </div>
                         </div>
                         <div class="valor-clave">
                             <div class="valor">
-                                <img src="resources/unchekc.svg" alt="" srcset="">
-                                <img src="resources/unchekc.svg" alt="" srcset="">
-                                <img src="resources/unchekc.svg" alt="" srcset="">
-                                <img src="resources/unchekc.svg" alt="" srcset="">
+                                <img src="resources/img/icon-resources/unchekc.svg" alt="uncheck" id="img1" srcset="">
+                                <img src="resources/img/icon-resources/unchekc.svg" alt="uncheck" id="img2" srcset="">
+                                <img src="resources/img/icon-resources/unchekc.svg" alt="uncheck" id="img3" srcset="">
+                                <img src="resources/img/icon-resources/unchekc.svg" alt="uncheck" id="img4" srcset="">
                             </div>
-                           
+
                         </div>
                         <div class="controles">
                             <div class="panel roboto-light">
                                 <div class="fila">
-                                    <div class="numero">1</div>
-                                    <div class="numero">2</div>
-                                    <div class="numero">3</div>
+                                    <div class="numero" onclick="cambiarImagen(1)">1</div>
+                                    <div class="numero" onclick="cambiarImagen(2)">2</div>
+                                    <div class="numero" onclick="cambiarImagen(3)">3</div>
                                 </div>
                                 <div class="fila">
-                                    <div class="numero">4</div>
-                                    <div class="numero">5</div>
-                                    <div class="numero">6</div>
+                                    <div class="numero" onclick="cambiarImagen(4)">4</div>
+                                    <div class="numero" onclick="cambiarImagen(5)">5</div>
+                                    <div class="numero" onclick="cambiarImagen(6)">6</div>
                                 </div>
                                 <div class="fila">
-                                    <div class="numero">7</div>
-                                    <div class="numero">8</div>
-                                    <div class="numero">9</div>
+                                    <div class="numero" onclick="cambiarImagen(7)">7</div>
+                                    <div class="numero" onclick="cambiarImagen(8)">8</div>
+                                    <div class="numero" onclick="cambiarImagen(9)">9</div>
                                 </div>
                                 <div class="fila">
                                     <div class="numero numVacio"></div>
-                                    <div class="numero">0</div>
+                                    <div class="numero" onclick="cambiarImagen(0)">0</div>
                                     <div class="numero numVacio"></div>
                                 </div>
                             </div>
                             <div class="barra_navegacion2"></div>
+                        </div>
+                    </div>
+
+                    <div class="pantalla-principal">
+                        <div class="notificaciones-principal">
+                            <div class="noti-hora ">
+                                <div class="hora-principal roboto-bold">
+                                    <h1 id="hora-actual-principal"></h1>
+                                </div>
+                            </div>
+                            <div class="notificaciones-icons">
+                                <div class="operador">
+                                    <img src="resources/img/icon-resources/senal.svg" alt="WiFi Status"> <!-- Imagen por defecto -->
+                                </div>
+                                <div class="wifi">
+                                    <img src="resources/img/icon-resources/internet.svg" alt="WiFi Status"> <!-- Imagen por defecto -->
+                                </div>
+                                <div class="bateria">
+                                    <div class="bateria-var"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aplicaciones">
+                            <div class="fila-app">
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/app-del-clima.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">clima</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/tienda-de-aplicaciones.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">app store</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/facebook.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">facebook</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/mensajero.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">mensengeer</p></div>
+                                </div>
+                            </div>
+                            <div class="fila-app">
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/whatsapp.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">whatsapp</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/tik-tok.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">tik tok</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/instagram.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">instagram</p></div>
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/logotipos.png" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <div class="app-name"><p class="nombre-app roboto-light">twitter</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-navegacion-principal">
+                            <div class="fila-app-panel">
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/telefono.jpeg" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <!-- <div class="app-name"><p class="nombre-app roboto-light">clima</p></div> -->
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/galery.jpeg" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <!-- <div class="app-name"><p class="nombre-app roboto-light">clima</p></div> -->
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/config.jpeg" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <!-- <div class="app-name"><p class="nombre-app roboto-light">clima</p></div> -->
+                                </div>
+                                <div class="app"> 
+                                    <div class="app-icon">
+                                        <img src="resources/img/icon-app/camera.jpeg" class="icon-app" alt="" srcset="">
+                                    </div>
+                                    <!-- <div class="app-name"><p class="nombre-app roboto-light">clima</p></div> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,10 +203,12 @@
         </div>
     </div>
 
-    <script src="resources/transicion.js"></script>
-    <script src="resources/volumen.js"></script>
-    <script src="resources/fechas.js"></script>
-    <script src="resources/pantalla_bloqueo.js"></script>
+    <script src="resources/js/transicion.js"></script>
+    <script src="resources/js/volumen.js"></script>
+    <script src="resources/js/fechas.js"></script>
+    <script src="resources/js/pantalla_bloqueo.js"></script>
+    <script src="resources/js/img.js"></script>
+    <script src="resources/js/bateria.js"></script>
 </body>
 
 </html>

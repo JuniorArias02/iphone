@@ -25,7 +25,7 @@ body {
   width: 4px;
   height: 60px;
   background-color: #0300cc;
-  z-index: 1000;
+  z-index: 10009;
   left: -4px;
   top: 215px;
 }
@@ -82,6 +82,7 @@ body {
   background-color: black;
   /* cursor: pointer; */
 }
+
 .telefono-pantalla {
   position: relative;
   border-radius: 80px;
@@ -95,7 +96,7 @@ body {
   border-radius: 80px;
   width: 430px;
   height: 780px;
-  background-image: url("fondo.jpg");
+  background-image: url("../img/icon-resources/fondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -109,14 +110,182 @@ body {
   width: 430px;
   height: 786px;
   background-color: #242423;
-  z-index: 10000;
+  z-index: 10010;
   opacity: 0;
   transition: opacity 0.3s ease;
 
   /* transition-duration: 2s; */
 }
-.blur-effect{
-    filter: blur(8px);
+.blur-effect {
+  filter: blur(8px);
+}
+/* pantalla principal */
+.pantalla-principal {
+  display: none;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 79px;
+  width: 430px;
+  height: 786px;
+  /* background-color: #ffff0059; */
+  background-image: url('../img/icon-resources/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+  /* opacity: 1 ; */
+  /* transition: opacity 1s ease; */
+  /* transition-duration: 2s; */
+}
+.notificaciones-principal {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* background-color: white; */
+}
+.notificaciones-icons {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  /* background-color: #0300cc; */
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 50px;
+}
+.noti-hora {
+  color: white;
+  margin-left: 30px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  width: 30%;
+  height: 40px;
+  /* background-color: #8e44ad; */
+  justify-content: flex-end;
+}
+.hora-principal {
+  margin: 0;
+  font-size: 12px;
+}
+.bateria {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 20px;
+  height: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 6px 10px 10px 6px;
+  position: relative;
+  overflow: hidden;
+}
+.bateria-var {
+  /* margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  margin-left: 1px; */
+  border-radius: 6px 10px 10px 6px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  width: 0;
+}
+.wifi {
+  margin-left: 8px;
+  margin-right: 8px;
+  /* background-color: #9d9d9d; */
+}
+.wifi img {
+  width: 20px;
+  height: 20px;
+}
+.wifi.conectado img {
+  content: url("../img/icon-resources/internet.png"); /* Reemplaza con la ruta a tu imagen de WiFi conectado */
+}
+.wifi.desconectado img {
+  content: url("../img/icon-resources/no-signal.png"); /* Reemplaza con la ruta a tu imagen de WiFi desconectado */
+}
+.operador {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: auto;
+  height: 20px;
+  display: flex;
+}
+
+/* aplicaciones */
+.aplicaciones {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* background-color: #414234; */
+}
+.fila-app {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  /* background-color: gray; */
+  margin-top: 25px;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 90px;
+  /* background-color: yellow; */
+  margin-left: 10px;
+  
+  /* overflow: hidden; */
+}
+.app-icon {
+  /* background-color: #0300cc; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: auto;
+ 
+  
+}
+.icon-app {
+  /* position: absolute; */
+  width: 90%;
+  margin: 0;
+  border-radius: 20px;
+  /* height: auto; */
+}
+.nombre-app {
+  margin: 0;
+  color: white;
+
+}
+
+.panel-navegacion-principal{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 140px;
+
+  /* background-color: #da341e; */
+}
+.fila-app-panel{
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 100px;
+  /* background-color: gray; */
+  margin-top: 25px;
+  background-color: #7a79795b;
+  border-radius: 40px;
 }
 
 /* parte de desbloqueo */
@@ -127,23 +296,29 @@ body {
   width: 430px;
   height: 786px;
   background-color: #24242359;
-  z-index: 10001;
+  z-index: 10000;
   opacity: 0;
   transition: opacity 1s ease;
   /* transition-duration: 2s; */
 }
-.icon{
-    position: absolute;
-    display: flex;
-    top: 10px;
-    right: 35%;
-    width: 100px;
-    height: 100xp;
+/* por el momento */
+
+/* .pantalla-bloqueado,
+.pantalla-desbloqueo {
+  display: none;
+} */
+.icon {
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 35%;
+  width: 100px;
+  height: 100xp;
 }
-.bloqueo-icon{
-    display: flex;
-    width: 50px;
-    height: 50px;
+.bloqueo-icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
 }
 .controles {
   position: relative;
@@ -163,7 +338,7 @@ body {
   bottom: 0;
 }
 .fila {
-    margin-top: 8px;
+  margin-top: 8px;
   width: 90%;
   height: auto;
   display: flex;
@@ -183,28 +358,28 @@ body {
   color: white;
   cursor: pointer;
 }
-.numero:hover{
-    background-color: #1c1c1db0;
-    transition-duration: 0.5s;
+.numero:hover {
+  background-color: #1c1c1db0;
+  transition-duration: 0.5s;
 }
-.numVacio{
-    display: none;
-    background: transparent;
+.numVacio {
+  display: none;
+  background: transparent;
 }
 .mostrar-pantalla {
   display: block;
   opacity: 1;
 }
-.pantalla-bloqueado, .pantalla-desbloqueo {
-    transition: filter 0.7s ease; /* Ajusta la duración y la función de tiempo según tu preferencia */
+.pantalla-bloqueado,
+.pantalla-desbloqueo {
+  transition: filter 0.7s ease; /* Ajusta la duración y la función de tiempo según tu preferencia */
 }
 
-
 /* img de calve */
-.valor-clave{
-    position: absolute;
-    top: 30%;
-    left: 30%;
+.valor-clave {
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 .notificaciones {
   position: absolute;
@@ -244,7 +419,7 @@ body {
   opacity: 0;
   border-color: black;
   border: solid;
-  z-index: 1000;
+  z-index: 10010;
   left: 10px;
   top: 115px;
 
@@ -270,7 +445,7 @@ body {
   opacity: 0;
   border-color: black;
   border: solid;
-  z-index: 1000;
+  z-index: 10010;
   left: 10px;
   top: 215px;
   overflow: hidden;
@@ -321,17 +496,17 @@ h1 {
   cursor: pointer;
 }
 .barra_navegacion2 {
-    cursor: pointer;
-    position: absolute;
-    border-radius: 40px;
-    width: 40%;
-    height: 5px;
-    bottom: -5px;
-    right: 31%;
-    background-color: gray;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s;
-  }
+  cursor: pointer;
+  position: absolute;
+  border-radius: 40px;
+  width: 40%;
+  height: 5px;
+  bottom: -5px;
+  right: 31%;
+  background-color: gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s;
+}
 .telefono-pantalla {
   overflow: hidden;
 }
@@ -349,7 +524,7 @@ h1 {
   /* transition-duration: 0.5s; */
 }
 .pantalla-desbloqueo:hover .barra_navegacion2 {
-    /* bottom: 10px; */
-    transform: translateY(-300%);
-    /* transition-duration: 0.5s; */
-  }
+  /* bottom: 10px; */
+  transform: translateY(-300%);
+  /* transition-duration: 0.5s; */
+}
