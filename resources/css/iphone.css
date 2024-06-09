@@ -170,6 +170,7 @@ body {
   margin: 0;
   font-size: 12px;
 }
+
 .bateria {
   margin-left: 8px;
   margin-right: 8px;
@@ -181,13 +182,9 @@ body {
   overflow: hidden;
 }
 .bateria-var {
-  /* margin-top: 0.5px;
-  margin-bottom: 0.5px;
-  margin-left: 1px; */
   border-radius: 6px 10px 10px 6px;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  width: 0;
 }
 .wifi {
   margin-left: 8px;
@@ -256,6 +253,7 @@ body {
   width: 90%;
   margin: 0;
   border-radius: 20px;
+  cursor: pointer;
   /* height: auto; */
 }
 .nombre-app {
@@ -300,10 +298,10 @@ body {
 }
 /* por el momento */
 
-.pantalla-bloqueado,
-.pantalla-desbloqueo {
+/* .pantalla-bloqueado,
+.pantalla-desbloqueo,.pantalla-principal{
   display: none;
-}
+} */
 .icon {
   position: absolute;
   display: flex;
