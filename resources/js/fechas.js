@@ -26,6 +26,7 @@ function actualizarHora2() {
     }
     var horaActual = horas + ':' + minutos ;
     document.getElementById('hora-actual-principal').innerText = horaActual;
+    document.getElementById('hora-actual-cal').innerText = horaActual;
 }
 setInterval(actualizarHora2, 1000);
 

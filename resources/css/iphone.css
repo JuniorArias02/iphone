@@ -121,7 +121,7 @@ body {
 }
 /* pantalla principal */
 .pantalla-principal {
-  display: none;
+  /* display: none; */
   position: relative;
   flex-direction: column;
   align-items: center;
@@ -129,7 +129,7 @@ body {
   width: 430px;
   height: 786px;
   /* background-color: #ffff0059; */
-  background-image: url('../img/icon-resources/fondo.jpg');
+  background-image: url("../img/icon-resources/fondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,6 +170,7 @@ body {
   margin: 0;
   font-size: 12px;
 }
+
 .bateria {
   margin-left: 8px;
   margin-right: 8px;
@@ -181,13 +182,9 @@ body {
   overflow: hidden;
 }
 .bateria-var {
-  /* margin-top: 0.5px;
-  margin-bottom: 0.5px;
-  margin-left: 1px; */
   border-radius: 6px 10px 10px 6px;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  width: 0;
 }
 .wifi {
   margin-left: 8px;
@@ -240,7 +237,7 @@ body {
   height: 90px;
   /* background-color: yellow; */
   margin-left: 10px;
-  
+
   /* overflow: hidden; */
 }
 .app-icon {
@@ -250,23 +247,21 @@ body {
   justify-content: center;
   width: 80px;
   height: auto;
- 
-  
 }
 .icon-app {
   /* position: absolute; */
   width: 90%;
   margin: 0;
   border-radius: 20px;
+  cursor: pointer;
   /* height: auto; */
 }
 .nombre-app {
   margin: 0;
   color: white;
-
 }
 
-.panel-navegacion-principal{
+.panel-navegacion-principal {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -275,7 +270,7 @@ body {
 
   /* background-color: #da341e; */
 }
-.fila-app-panel{
+.fila-app-panel {
   margin-left: 15px;
   display: flex;
   justify-content: center;
@@ -304,7 +299,7 @@ body {
 /* por el momento */
 
 /* .pantalla-bloqueado,
-.pantalla-desbloqueo {
+.pantalla-desbloqueo,.pantalla-principal{
   display: none;
 } */
 .icon {
